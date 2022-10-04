@@ -3,10 +3,14 @@ This repo contains a the back-end and front-end codes for a React button that yo
 
 ## Getting started
 1-Open a terminal window.
+
 2-Enter the root directory.
+
 3-In terminal, run the following line to open the code in your default editor: code .
+
 4-Run the following line to start to the website in your local host (note: it may take up to 3 minutes to load the page due to heavy dependencies):
 npm run start
+
 5-Press the "Connect to wallet" button to connect to your metamask wallet, a window of Metamask should pop up, authenticate with your credentials.
 
 The local host is now connected to your metamask wallet, meaning that you can deploy your smart contract right away:
