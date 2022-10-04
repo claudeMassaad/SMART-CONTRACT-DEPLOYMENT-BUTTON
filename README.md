@@ -11,11 +11,17 @@ npm run start
 
 The local host is now connected to your metamask wallet, meaning that you can deploy your smart contract right away:
 
-6-From root directory go to '/contracts', and add your smart contract with .sol extension
+6-From root directory go to '/contracts', and add your smart contract with .sol extension.
+
 7-Compile your smart contract (using remix ethereum or truffle) and go to '/src/App.js' , there you will find 2 variables under the import statements: contractByteCode and contractAbi.
-8-Paste your contract byte code between the "" of the contractByteCode variable
-9-Paste your abi (you can delete the already written brackets) in the contractAbi variable
-10-Save your file
-11-Go back to the website and press deploy button
+
+8-Paste your contract byte code between the "" of the contractByteCode variable.
+
+9-Paste your abi (you can delete the already written brackets) in the contractAbi variable.
+
+10-Save your file.
+
+11-Go back to the website and press deploy button.
+
 
 In the console you can see your transaction hash. You can copy it then go to rinkeby.etherscan.io (if your network is rinkeby) and paste it in the search bar. There you see your smart contract details of deployment.
