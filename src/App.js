@@ -7,16 +7,9 @@ import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { ContractFactory } from "ethers";
 
-const contractByteCode =
-  "6080604052348015600f57600080fd5b5060006040518060400160405280600581526020017f7374657665000000000000000000000000000000000000000000000000000000815250905050603f8060586000396000f3fe6080604052600080fdfea26469706673582212200febac3ba7b351efa15f1621359692fa2f945db47535b397cb4ee005780b4b0764736f6c63430008070033";
+const contractByteCode = "";
 
-const contractAbi = [
-  {
-    inputs: [],
-    stateMutability: "nonpayable",
-    type: "constructor",
-  },
-];
+const contractAbi = [];
 
 let provider;
 let signer;
