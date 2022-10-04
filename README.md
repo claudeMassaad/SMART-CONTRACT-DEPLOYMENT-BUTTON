@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+## Description
+This repo contains a the back-end and front-end codes for a React button that you can run on your local host. When you open the website there is a button that you click that connects you to your metamask wallet. Then once the connection is successful, you can see another button "Deploy smart contract" that deploys your smart contract to whatever network your address is connected to.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting started
+1-Open a terminal window
+2-Enter the root directory
+3-In terminal, run the following line to open the code in your default editor: code .
+4-Run the following line to start to the website in your local host (note: it may take up to 3 minutes to load the page due to heavy dependencies):
+npm run start
+5-Press the "Connect to wallet" button to connect to your metamask wallet, a window of Metamask should pop up, authenticate with your credentials.
 
-## Available Scripts
+The local host is now connected to your metamask wallet, meaning that you can deploy your smart contract right away:
 
-In the project directory, you can run:
+6-From root directory go to '/contracts', and add your smart contract with .sol extension
+7-Compile your smart contract (using remix ethereum or truffle) and go to '/src/App.js' , there you will find 2 variables under the import statements: contractByteCode and contractAbi.
+8-Paste your contract byte code between the "" of the contractByteCode variable
+9-Paste your abi (you can delete the already written brackets) in the contractAbi variable
+10-Save your file
+11-Go back to the website and press deploy button
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In the console you can see your transaction hash. You can copy it then go to rinkeby.etherscan.io (if your network is rinkeby) and paste it in the search bar. There you see your smart contract details of deployment.
