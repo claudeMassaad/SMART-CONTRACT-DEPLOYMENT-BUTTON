@@ -13,21 +13,22 @@ This repo contains a the back-end and front-end codes for a React button that yo
 5-Run the following line to start to the website in your local host (note: it may take up to 3 minutes to load the page due to heavy dependencies):
 npm run start
 
-6-Press the "Connect to wallet" button to connect to your metamask wallet, a window of Metamask should pop up, authenticate with your credentials.
+6-When the website opens on your local host, press the "Connect to wallet" button to connect to your metamask wallet, a window of Metamask should pop up, authenticate with your credentials.
 
-The local host is now connected to your metamask wallet, meaning that you can deploy your smart contract right away:
+The local host is now connected to your metamask wallet. Next step before deploying your smart contract is to add your contract abi and bytecode.
 
-7-From root directory go to '/contracts', and add your smart contract with .sol extension.
+7-From root directory go to '/src/contracts/ContractDetails.json'.
 
-8-Compile your smart contract (using remix ethereum or truffle) and go to '/src/App.js' , there you will find 2 variables under the import statements: contractByteCode and contractAbi.
+8-Inside "abi" add your contract abi between the 2 brackets. 
+!Note: if you copied your abi is contained inside [ ] , delete the [ ] and { } surrounding your abi. 
 
-9-Paste your contract byte code between the "" of the contractByteCode variable.
+9-Paste your contract byte code between the "" of the byteCode variable. 
+!Note: if you copy your bytecode from ethereum remix platform, your bytcode is contained is the string of numbers and letters in the "object" field.
 
-10-Paste your abi (you can delete the already written brackets) in the contractAbi variable.
+10-Save your file.
 
-11-Save your file.
+11-Go back to the website and press deploy button.
 
-12-Go back to the website and press deploy button.
-
+12-You should be taken to metamask to accept or reject the transaction. Accept the transaction.
 
 In the console you can see your transaction hash. You can copy it then go to rinkeby.etherscan.io (if your network is rinkeby) and paste it in the search bar. There you see your smart contract details of deployment.
