@@ -1,12 +1,12 @@
 import "./App.css";
-
+import contract from "./contracts/ContractDetails.json";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { ContractFactory } from "ethers";
 
-const contractByteCode = "";
+const contractByteCode = contract.byteCode;
 
-const contractAbi = [];
+const contractAbi = contract.abi;
 
 let provider;
 let signer;
