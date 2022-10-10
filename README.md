@@ -15,7 +15,10 @@ npm run start
 
 6-When the website opens on your local host, press the "Connect to wallet" button to connect to your metamask wallet, a window of Metamask should pop up, authenticate with your credentials.
 
-The local host is now connected to your metamask wallet. Next step before deploying your smart contract is to add your contract abi and bytecode.
+The local host is now connected to your metamask wallet. Next step before deploying your smart contract is to add your contract abi, bytecode and values for the parameters of your constructor (if it has parameters).
+
+If your contract has parameters:
+In 'src/App.js' at line 72, add the values that the contract's constructor's parameters will take: await factory.deploy("param1", "param2");
 
 7-From root directory go to '/src/contracts/ContractDetails.json'.
 
