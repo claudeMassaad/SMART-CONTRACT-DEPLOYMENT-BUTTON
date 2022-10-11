@@ -51,11 +51,6 @@ function createConfiguration() {
  */
 function compileSources(config) {
   try {
-    console.log(
-      JSON.stringify(
-        JSON.parse(solc.compile(JSON.stringify(config), getImports))
-      )
-    );
     return JSON.parse(solc.compile(JSON.stringify(config), getImports));
   } catch (e) {
     console.log(e);

@@ -3,6 +3,12 @@ import contract from "./contracts/ContractDetails.json";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { ContractFactory } from "ethers";
+import {
+  Form,
+  Field,
+  SubmitButton,
+  SubmitButtonDeploy,
+} from "./components/Form";
 
 const contractByteCode = contract.byteCode;
 
@@ -55,12 +61,12 @@ function App() {
 
   const connectWalletButton = () => {
     return (
-      <button
-        onClick={connectWalletHandler}
-        className="cta-button connect-wallet-button"
-      >
-        Connect Wallet
-      </button>
+      <div className="card-container">
+        <img className="logo" src={require("./images/aetherLogo.png")} />
+        <SubmitButton onClick={connectWalletHandler}>
+          Connect Wallet
+        </SubmitButton>
+      </div>
     );
   };
 
@@ -76,7 +82,14 @@ function App() {
   };
 
   const deployButton = () => {
-    return <button onClick={deploy}>Deploy Contract</button>;
+    return (
+      <>
+        <div className="card-container">
+          <img className="logo" src={require("./images/aetherLogo.png")} />
+          <SubmitButton onClick={deploy}>Deploy Contract</SubmitButton>
+        </div>
+      </>
+    );
   };
 
   useEffect(() => {
